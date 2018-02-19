@@ -1,0 +1,201 @@
+/* GENERAL */
+
+body {
+    background-color: #BFC0C0;
+}
+
+.jumbotron {
+    background-color: #FFFFFF;
+    margin-top: 30px;
+}
+
+#surveyJumbotron {
+    text-align: center;
+}
+
+
+/* TEXT */
+
+#mainTitle {
+    color: #2D3142;
+}
+
+.message {
+    color: #EF8354;
+}
+
+.surveyButtonText {
+    color: white;
+}
+
+.footerLinks {
+    color: #4F5D75;
+    font-weight: bold;
+}
+
+h3 {
+    color: #4F5D75;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    color: #2D3142;
+}
+
+
+/* BUTTONS */
+
+#surveyButton {
+    background-color: #4F5D75;
+}
+
+#submit {
+    background-color: #EF8354;
+}
+
+
+/* FORM */
+
+#name,
+#photo {
+    color: #EF8354;
+}
+
+
+/* FORM */
+
+
+/* SELECT BOX */
+
+.sel {
+    font-size: 1rem;
+    display: inline-block;
+    margin: 3em 2em;
+    width: 350px;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.sel::before {
+    position: absolute;
+    content: '\f063';
+    font-family: 'FontAwesome';
+    font-size: 2em;
+    color: #FFF;
+    right: 1px;
+    top: calc(50% - 0.5em);
+}
+
+.sel.active::before {
+    transform: rotateX(-180deg);
+}
+
+.sel__placeholder {
+    display: block;
+    font-family: 'Helvetica';
+    font-size: 2.3em;
+    color: #EF8354;
+    padding: 0.2em 0.5em;
+    text-align: left;
+    /* pointer-events: none; */
+    /* user-select: none; */
+    visibility: visible;
+}
+
+.sel.active .sel__placeholder {
+    visibility: hidden;
+}
+
+.sel__placeholder::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.2em 0.5em;
+    content: attr(data-placeholder);
+    visibility: hidden;
+}
+
+.sel.active .sel__placeholder::before {
+    visibility: visible;
+}
+
+.sel__box {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: -4px;
+    display: none;
+    list-style-type: none;
+    text-align: left;
+    font-size: 1em;
+    background-color: #FFF;
+    width: calc(100% + 8px);
+    box-sizing: border-box;
+}
+
+.sel.active .sel__box {
+    display: block;
+    animation: fadeInUp 500ms;
+}
+
+.sel__box__options {
+    display: list-item;
+    font-family: 'Helvetica';
+    font-size: 1.5em;
+    color: #EF8354;
+    padding: 0.5em 1em;
+    /* user-select: none; */
+}
+
+.sel__box__options::after {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    font-size: 0.5em;
+    margin-left: 5px;
+    display: none;
+}
+
+.sel__box__options.selected::after {
+    display: inline;
+}
+
+.sel__box__options:hover {
+    background-color: #ebedef;
+}
+
+.sel {
+    border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+}
+
+.sel--question {
+    z-index: 3;
+}
+
+
+/* FORM */
+
+
+/* KEYFRAMES */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
